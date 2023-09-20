@@ -1,12 +1,19 @@
 <?php
 
-function print_even_numbers(int $start, int $end, int $step): void
-{
-    for ($i = $start; $i <= $end; $i += $step) {
-        if ($i % 2 === 0) {
-            echo $i . PHP_EOL;
-        }
+function printFibonacci($count) {
+    $first = 0;
+    $second = 1;
+    
+    for ($i = 0; $i < $count; $i++) {
+        echo $first . ' ';
+        
+        $next = $first + $second;
+        $first = $second;
+        $second = $next;
     }
 }
 
-print_even_numbers(1, 20, 2);
+$count = 15;
+printFibonacci($count);
+
+?>

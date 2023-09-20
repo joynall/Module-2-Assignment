@@ -27,6 +27,18 @@ print_even_numbers_while(1, 20, 2);
 
 //for do while loop
 
+function print_even_numbers_do_while(int $start, int $end, int $step): void
+{
+    $i = $start;
+    do {
+        if ($i % 2 === 0) {
+            echo $i . PHP_EOL;
+        }
+        $i += $step;
+    } while ($i <= $end);
+}
+
+print_even_numbers_do_while(1, 20, 2);
 
 
 
